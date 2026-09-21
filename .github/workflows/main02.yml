@@ -42,7 +42,7 @@ jobs:
         with:
           scanChangedFilesOnly: true
           organization: va-github-actions
-          projectKey: profiles-nosarif-25
+          projectKey: re-profiles-25-ns
           codeScanUrl: https://preview.codescan.io/
           login: squ_fc6f53207c584061b9427fdf7e9db28a166e2dde
 
@@ -58,7 +58,7 @@ jobs:
         with:
           scanChangedFilesOnly: true
           organization: va-github-actions
-          projectKey: profiles-nosarif-25
+          projectKey: re-profiles-25-ns
           codeScanUrl: https://preview.codescan.io/
           login: squ_fc6f53207c584061b9427fdf7e9db28a166e2dde
 
