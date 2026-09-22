@@ -1,0 +1,30 @@
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: |
+    echo "Node: $(node --version)"
+    echo "npm:  $(npm --version)"
+  displayName: 'Print Node version'
+
+- task: CodeScanCloudPrepare@3
+  inputs:
+    CodeScanCloud: 'azuretest_newversion'
+    organization: 'sprint-tickets'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'azure_devops'
+    cliProjectName: 'azure_devops'
+    cliSources: '.'
+    extraProperties: |
+      sonar.qualitygate.wait=true
+      sonar.token=squ_448331552d267216058b4664fb33ace23339274d
+- task: CodeScanCloudAnalyze@3
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+- task: CodeScanCloudPublish@3
+  inputs:
+    pollingTimeoutSec: '300'
