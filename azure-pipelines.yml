@@ -12,8 +12,8 @@ steps:
 
 - task: CodeScanCloudPrepare@3
   inputs:
-    CodeScanCloud: 'azuretest_newversion'
-    organization: 'sprint-tickets'
+    CodeScanCloud: 'qa-test_azure'
+    organization: 'cs-release-26-0-12'
     scannerMode: 'CLI'
     configMode: 'manual'
     cliProjectKey: 'azure_devops'
@@ -21,7 +21,7 @@ steps:
     cliSources: '.'
     extraProperties: |
       sonar.qualitygate.wait=true
-      sonar.token=squ_448331552d267216058b4664fb33ace23339274d
+      sonar.token=squ_6f14a39c57489e8f936493259d69340d0d317b80
 - task: CodeScanCloudAnalyze@3
   inputs:
     jdkversion: 'JAVA_HOME_17_X64'
