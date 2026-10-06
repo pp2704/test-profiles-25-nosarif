@@ -16,12 +16,12 @@ steps:
     organization: 'cs-release-26-0-12'
     scannerMode: 'CLI'
     configMode: 'manual'
-    cliProjectKey: 'azure_devops'
-    cliProjectName: 'azure_devops'
+    cliProjectKey: 'profiles_azure_devops'
+    cliProjectName: 'profiles_azure_devops'
     cliSources: '.'
     extraProperties: |
       sonar.qualitygate.wait=true
-      sonar.token=squ_6f14a39c57489e8f936493259d69340d0d317b80
+      sonar.token=squ_2a13caf1d5c025e59433594f0ff623079f059dfb
 - task: CodeScanCloudAnalyze@3
   inputs:
     jdkversion: 'JAVA_HOME_17_X64'
