@@ -28,4 +28,4 @@ steps:
     jdkversion: 'JAVA_HOME_17_X64'
 - task: CodeScanCloudPublish@3
   inputs:
-    pollingTimeoutSec: '30000'
+    pollingTimeoutSec: '300'
