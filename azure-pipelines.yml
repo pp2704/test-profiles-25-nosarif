@@ -21,10 +21,10 @@ steps:
     cliSources: '.'
     extraProperties: |
       sonar.qualitygate.wait=true
-      sonar.token=squ_2a13caf1d5c025e59433594f0ff623079f059dfb
+      sonar.token=squ_4a75410fac823bee2394114852693f0d458bb8f7
 - task: CodeScanCloudAnalyze@3
   inputs:
     jdkversion: 'JAVA_HOME_17_X64'
 - task: CodeScanCloudPublish@3
   inputs:
-    pollingTimeoutSec: '300'
+    pollingTimeoutSec: '30000'
