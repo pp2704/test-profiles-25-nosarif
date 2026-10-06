@@ -21,6 +21,7 @@ steps:
     cliSources: '.'
     extraProperties: |
       sonar.qualitygate.wait=true
+      sonar.qualitygate.timeout=3600000
       sonar.token=squ_4a75410fac823bee2394114852693f0d458bb8f7
 - task: CodeScanCloudAnalyze@3
   inputs:
